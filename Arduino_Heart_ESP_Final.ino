@@ -65,3 +65,32 @@ void loop()
 
         if(k==0)
           time1=millis();
+{
+    while(esp8266.available())
+    {
+      char c = esp8266.read();
+      response += c;
+    }
+  }
+  if(debug)
+  {
+    Serial.print(response);
+  }
+  return response;
+}
+
+void InitWifiModule()
+{
+  sendData("AT+RST\r\n", 2000, DEBUG);
+  delay(5000);
+  sendData("AT+CWMODE=1\r\n", 1500, DEBUG);
+  delay(1500);
+  sendData("AT+CWJAP=\"YOUR_WIFI_NAME\",\"YOUR_WIFI_PASSWORD\"\r\n", 9000, DEBUG);
+  delay(9000);
+  sendData("AT+CIPMUX=1\r\n", 1500, DEBUG);
+  delay(1500);
+  sendData("AT+CIPSERVER=1,80\r\n", 1500, DEBUG);
+  delay(1500);
+  sendData("AT+CIFSR\r\n", 1500, DEBUG);
+  delay(1500);
+}
