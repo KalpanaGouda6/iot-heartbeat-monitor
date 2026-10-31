@@ -21,7 +21,7 @@ Edit the Wi-Fi name and password in the InitWifiModule() function before uploadi
 
 ## My contribution
 - Monitored and tested the pulse sensor readings
-- Wrote the project report
+- Wrote the project report.
 
 Project duration: October 2022 to January 23
 
