@@ -1,18 +1,29 @@
-#  IoT-Based Heartbeat Monitoring System  
+# IoT-Based Heartbeat Monitoring System
 
-## 📌 Overview  
-A microcontroller-based project that measures a person’s heartbeat and sends real-time data to a mobile application using Bluetooth and Blynk IoT platform.  
+A team project (3 members) that measures a person's heartbeat with a pulse sensor and shows the heart rate on a web page over Wi-Fi.
 
-## 🛠️ Tech Stack  
-- Arduino  
-- Pulse Sensor  
-- Blynk IoT App  
-- Bluetooth Module  
+## How it works
+- The pulse sensor is read by an Arduino, which counts 5 beats and calculates beats per minute.
+- An ESP8266 Wi-Fi module runs a small web server.
+- Opening the module's IP address in a browser shows the current heart rate.
 
-## ✨ Features  
-- Real-time heartbeat monitoring  
-- Data transmission via Bluetooth  
-- Alerts for abnormal pulse rates  
+## Components
+- Arduino
+- Pulse sensor
+- ESP8266 Wi-Fi module
+- LED and push buttons (start and reset)
+
+## Files
+- Arduino_Heart_ESP_Final.ino: Arduino program
+
+## Setup
+Edit the Wi-Fi name and password in the InitWifiModule() function before uploading.
+
+## My contribution
+- Monitored and tested the pulse sensor readings
+- Wrote the project report
+
+Project duration: October 2022 to January 2023
 
 ## 📂 Project Duration  
 📅 Oct 2022 – Jan 2023  
